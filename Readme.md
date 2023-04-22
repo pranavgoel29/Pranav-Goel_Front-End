@@ -122,8 +122,8 @@ export default List;
 
 ## Output:
 
-![Initial State](/src/assets/initialstate.png)
+![Initial State](/initialstate.png)
 
 When item is selected:
 
-![Output](/src/assets/output.png)
+![Output](/output.png)
