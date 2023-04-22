@@ -1,4 +1,9 @@
-.li {
+ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+li {
     width: 500px;
     height: 60px;
     display: flex;

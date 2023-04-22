@@ -9,7 +9,6 @@ import PropTypes from "prop-types";
 const WrappedSingleListItem = ({ index, isSelected, onClickHandler, text }) => {
   return (
     <li
-      className="li"
       style={{ backgroundColor: isSelected ? "green" : "red" }}
       // The onClick event was not passed correctly. It should be onClick={() => onClickHandler(index)} and not onClick={onClickHandler(index)}. To pass a parameter in a function in the 'onClick' event the attribute should be returned by an arrow function.
       onClick={() => onClickHandler(index)}
@@ -35,10 +34,10 @@ const SingleListItem = WrappedSingleListItem;
 // List Component
 const WrappedListComponent = ({ items }) => {
   // Swap the order of the setSelectedIndex and selectedIndex variables in the useState hook.
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   useEffect(() => {
-    setSelectedIndex(0);
+    setSelectedIndex(null);
   }, [items]);
 
   const handleClick = (index) => {
@@ -46,7 +45,7 @@ const WrappedListComponent = ({ items }) => {
   };
 
   return (
-    <ul style={{ textAlign: "left" }}>
+    <ul>
       {items &&
         items.map((item, index) => (
           <SingleListItem
