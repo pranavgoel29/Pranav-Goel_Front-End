@@ -1,0 +1,12 @@
+.li {
+    width: 500px;
+    height: 60px;
+    display: flex;
+    font-weight: 700;
+    border-radius: 12px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    margin-top: 1rem;
+}
