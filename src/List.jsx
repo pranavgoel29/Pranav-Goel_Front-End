@@ -1,4 +1,7 @@
-import React, { useState, useEffect, memo } from "react";
+//  'memo' is is not being used anywhere after modifying the code so we can avoid importing it.
+// import React, { useState, useEffect, memo } from "react";
+
+import React, { useState, useEffect } from "react";
 import "./list.css";
 import PropTypes from "prop-types";
 
@@ -24,7 +27,10 @@ WrappedSingleListItem.propTypes = {
   text: PropTypes.string.isRequired,
 };
 
-const SingleListItem = memo(WrappedSingleListItem);
+// Here, memo is of no use so we can simply remove it
+
+// const SingleListItem = memo(WrappedSingleListItem);
+const SingleListItem = WrappedSingleListItem;
 
 // List Component
 const WrappedListComponent = ({ items }) => {
@@ -71,6 +77,9 @@ WrappedListComponent.defaultProps = {
   items: [{ text: "Item 1" }, { text: "Item 2" }],
 };
 
-const List = memo(WrappedListComponent);
+// Here, memo is of no use so we can simply remove it
+
+// const List = memo(WrappedListComponent);
+const List = WrappedListComponent;
 
 export default List;
